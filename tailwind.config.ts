@@ -1,5 +1,5 @@
 import type { Config } from 'tailwindcss';
-import tailwindcssAnimate from 'tailwindcss-animate';
+// import tailwindcssAnimate from 'tailwindcss-animate';
 
 export default {
   darkMode: ['class'],
@@ -7,6 +7,7 @@ export default {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -74,6 +75,7 @@ export default {
       'fade-in-from-top': 'fade-in-from-top 0.5s ease-out',
     },
   },
-  // plugins: [require('tailwindcss-animate')],
-  plugins: [tailwindcssAnimate],
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require('tailwindcss-animate')],
+  // plugins: [tailwindcssAnimate],
 } satisfies Config;
